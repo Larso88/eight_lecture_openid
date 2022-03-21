@@ -4,7 +4,7 @@ import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
 
 function FrontPage() {
     return  <div>
-                <h1>Front Page</h1>
+                    <h1 id="headerH1">Front Page</h1>
                 <div id="linkDiv">
                     <Link to={"/login"}>Login</Link>
                 </div>
@@ -14,7 +14,7 @@ function FrontPage() {
             </div>;
 }
 
-function Appication() {
+function Application() {
     return <BrowserRouter>
                 <Routes>
                     <Route path={"/"} element={<h1><FrontPage/></h1>} />
@@ -26,4 +26,4 @@ function Appication() {
             </BrowserRouter>;
 }
 
-ReactDOM.render(<Appication />, document.getElementById("app"));
+ReactDOM.render(<Application />, document.getElementById("app"));
